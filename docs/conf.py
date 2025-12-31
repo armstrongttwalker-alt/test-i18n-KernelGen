@@ -19,8 +19,6 @@ multiproject_projects = {
 
 current_project  = get_project(multiproject_projects)
 
-master_doc = "index"
-
 # Set all values directly
 # -----------------------
 
