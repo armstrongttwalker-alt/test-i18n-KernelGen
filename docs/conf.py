@@ -11,9 +11,13 @@ multiproject_projects = {
    # to avoid including the files twice.
    "en": {
        "use_config_file": False,
+       "config": {
+            "master_doc": "en/index",
    },
    "zh": {
        "use_config_file": False,
+       "config": {
+            "master_doc": "zh/index",
    },
 }
 
