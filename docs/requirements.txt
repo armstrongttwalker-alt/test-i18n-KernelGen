@@ -1,4 +1,3 @@
-sphinx-multiproject
 myst-parser
 sphinx-rtd-theme
 sphinx-book-theme~=1.1
@@ -11,3 +10,5 @@ sphinxext.opengraph~=0.13.0
 sphinx-pyscript
 sphinx-tippy>=0.4.3
 sphinx-togglebutton
+sphinx-tabs==3.4.7
+sphinx-prompt==1.10.2
