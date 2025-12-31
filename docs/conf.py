@@ -162,7 +162,7 @@ locale_dirs = [
 ]
 gettext_compact = False
 
-html_theme = "sphinx_rtd_theme"
+html_theme = "sphinx_book_theme"
 html_static_path = ["_static", f"{docset}/_static"]
 html_css_files = ["css/custom.css"]
 # 先不添加 sphinx_prompt_css.css，可能不存在
