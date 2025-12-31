@@ -19,12 +19,3 @@ multiproject_projects = {
 
 current_project  = get_project(multiproject_projects)
 
-# Set all values directly
-# -----------------------
-
-if current_project == 'en':
-   # File: docs/en/conf.py
-   from en.conf import *
-elif current_project == 'zh':
-   # File: docs/zh/conf.py
-   from zh.conf import *
