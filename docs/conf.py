@@ -100,8 +100,9 @@ templates_path = ["_templates"]
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
 
 master_doc = "index"
-copyright = "KernelGen Team & contributors"
-version = "1.0.0"
+copyright = '2025, FlagOS Community'
+author = 'FlagOS Community'
+release = '1.0.0'
 release = version
 exclude_patterns = ["_build", "shared", "_includes"]
 if docset == "zh":
@@ -169,17 +170,35 @@ html_css_files = ["css/custom.css"]
 html_js_files = []
 
 html_logo = "img/logo.svg"
+html_favicon = "img/logo.svg"
 html_theme_options = {
     "logo_only": True,
 }
-html_context = {
-    "conf_py_path": f"/docs/{docset}/",
-    "display_github": True,
-    "github_user": "armstrongttwalker-alt",
-    "github_repo": "test-i18n-KernelGen",
-    "github_version": "main",
-    "plausible_domain": f"{os.environ.get('READTHEDOCS_PROJECT')}.readthedocs.io",
+
+html_theme_options = {
+    "logo": {
+      "image_light": "_static/kernelgen-logo.svg",
+      "image_dark": "_static/kernelgen-logo.svg",
+   },
+    "home_page_in_toc": True,
+    "use_download_button": False,
+    "repository_url": "https://github.com/flagos-ai/KernelGen",
+    "use_edit_page_button": True,
+    # "github_url": "https://github.com/flagos-ai/KernelGen",
+    # "repository_branch": "master",
+    # "path_to_docs": "docs",
+    "use_repository_button": True,
+    # "announcement": "<b>v3.0.0</b> is now out! See the Changelog for details",
 }
+
+# html_context = {
+#     "conf_py_path": f"/docs/{docset}/",
+#     "display_github": True,
+#     "github_user": "armstrongttwalker-alt",
+#     "github_repo": "test-i18n-KernelGen",
+#     "github_version": "main",
+#     "plausible_domain": f"{os.environ.get('READTHEDOCS_PROJECT')}.readthedocs.io",
+# }
 
 rst_epilog = """
 .. |org_brand| replace:: KernelGen Community
