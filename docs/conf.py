@@ -1,5 +1,7 @@
 # File: docs/conf.py
 
+from multiproject.utils import get_project
+
 extensions = [
    "multiproject",
 ]
