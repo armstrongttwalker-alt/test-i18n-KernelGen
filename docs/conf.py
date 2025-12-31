@@ -23,8 +23,8 @@ current_project  = get_project(multiproject_projects)
 # -----------------------
 
 if current_project == 'en':
-   # File: docs/user/conf.py
+   # File: docs/en/conf.py
    from en.conf import *
 elif current_project == 'zh':
-   # File: docs/dev/conf.py
+   # File: docs/zh/conf.py
    from zh.conf import *
