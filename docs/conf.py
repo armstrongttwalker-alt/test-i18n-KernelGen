@@ -13,11 +13,13 @@ multiproject_projects = {
        "use_config_file": False,
        "config": {
             "master_doc": "en/index",
+         }
    },
    "zh": {
        "use_config_file": False,
        "config": {
             "master_doc": "zh/index",
+         }
    },
 }
 
