@@ -103,7 +103,7 @@ master_doc = "index"
 copyright = '2025, FlagOS Community'
 author = 'FlagOS Community'
 release = '1.0.0'
-release = version
+# release = version
 exclude_patterns = ["_build", "shared", "_includes"]
 if docset == "zh":
     exclude_patterns.append("en")
