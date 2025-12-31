@@ -12,7 +12,7 @@ multiproject_projects = {
    "en": {
        "use_config_file": False,
    },
-   "zh_CN": {
+   "zh": {
        "use_config_file": False,
    },
 }
@@ -25,6 +25,6 @@ current_project  = get_project(multiproject_projects)
 if current_project == 'en':
    # File: docs/user/conf.py
    from en.conf import *
-elif current_project == 'zh_CN':
+elif current_project == 'zh':
    # File: docs/dev/conf.py
-   from zh_CN.conf import *
+   from zh.conf import *
