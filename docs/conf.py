@@ -119,7 +119,21 @@ intersphinx_mapping = {
 intersphinx_disabled_reftypes = ["*"]
 
 myst_enable_extensions = [
+    "dollarmath",
+    "amsmath",
     "deflist",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "colon_fence",
+    "smartquotes",
+    "replacements",
+    # "linkify",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+    "attrs_inline",
+    "attrs_block",
 ]
 htmlhelp_basename = "KernelGendoc"
 latex_documents = [
