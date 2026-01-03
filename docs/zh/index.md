@@ -47,6 +47,14 @@
 ---
 
 ```{toctree}
+:caption: 📑 Release Notes
+:maxdepth: 5
+:hidden:
+
+release_notes/release-notes.md
+```
+
+```{toctree}
 :caption: 📚 手册指南
 :maxdepth: 5
 :hidden:
