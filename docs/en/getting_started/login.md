@@ -17,6 +17,7 @@ If you signed out and want sign in KernelGen, perform the following steps:
 
     ![alt text](../assets/images/2-login-and-sign-up-en.png)
 
+
 4. Click **Login/Sign up**.
 
     The welcome page opens.
