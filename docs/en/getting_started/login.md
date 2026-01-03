@@ -13,8 +13,8 @@ If you signed out and want sign in KernelGen, perform the following steps:
     3. Enter the received verification code for your phone number or Email address.
     4. Read and select the checkbox at the bottom to accept the **User Agreement** and **Privacy Policy** terms.
 
-   ![alt text](../assets/images/2-login-and-sign-up-en.png)
-
+    ![alt text](../assets/images/2-login-and-sign-up-en.png)
+    
 4. Click **Login/Sign up**.
 
     The welcome page opens.
