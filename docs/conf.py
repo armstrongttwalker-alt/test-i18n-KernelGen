@@ -176,6 +176,7 @@ html_theme_options = {
 }
 
 html_theme_options = {
+    "extra_navbar": '<a href="https://test-website-en.readthedocs.io/en/latest/">返回文档中心</a>',
     "logo": {
       "image_light": "_static/kernelgen-logo.svg",
       "image_dark": "_static/kernelgen-logo.svg",
