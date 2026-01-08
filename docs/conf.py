@@ -145,6 +145,9 @@ latex_engine = 'xelatex'  # 必须使用xelatex支持中文
 # 根据语言配置latex_documents
 if docset == "en":
     # 英文配置
+    latex_elements = {
+        'preamble': '\\renewcommand{\\contentsname}{Table of Contents}\n',
+    }
     latex_documents = [
         (
             "index",
@@ -157,17 +160,16 @@ if docset == "en":
     
 else:
     # 中文配置
-    latex_engine = "xelatex"
     latex_use_xindy = False
     latex_elements = {
-        "preamble": "\\usepackage[UTF8]{ctex}\n",
+        "preamble": "\\usepackage[UTF8]{ctex}\n\\renewcommand{\\contentsname}{目录}\n",
     }
     latex_documents = [
         (
             "index",
-            "KernelGen****.tex",  # 保持相同文件名，但放在不同目录
-            "KernelGen**** 文档",
-            "KernelGen**** 团队",
+            "KernelGen.tex",  # 保持相同文件名，但放在不同目录
+            "KernelGen 文档",
+            "KernelGen 团队",
             "manual",
         ),
     ]

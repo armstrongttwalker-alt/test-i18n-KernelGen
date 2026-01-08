@@ -1,6 +1,7 @@
 # Generate Kernels through your operator definitions
 
 After signing in to KernelGen, you will see the welcome page.
+
 ![alt text](../assets/images/welcom-en.png)
 
 On the welcome page, perform the following steps to generate Kernels:
@@ -19,6 +20,7 @@ On the welcome page, perform the following steps to generate Kernels:
 2. Click each URL to view the corresponding code snippet in the right panel.
 
    ![alt text](../assets/images/codesnippet-en.png)
+
    You can also view the source of code snippets from GitHub or view the original requirements:
 
    - To view the source of code snippets, click **View source on GitHub** in this panel.
@@ -40,6 +42,7 @@ On the welcome page, perform the following steps to generate Kernels:
 
    - In the **KernelGen Configuration** section, modify the following configuration:
      - **Auto Optimization Max Iteration Rounds**: The maximum number of iterations KernelGen attempts to pass the correctness test.
+
    ![alt text](../assets/images/operator-definition-en.png)
 
 6. In the confirmation dialogue box, click **Confirm**.
@@ -49,6 +52,5 @@ On the welcome page, perform the following steps to generate Kernels:
 7. In the **KernelGen** panel on the right, check the statuses of the **Kernel**, **CUDA Implementation**, **Correctness Test**, and **Speedup Ratio Test**.
 
    The statuses turn to **Generating**.
-
 
    ![alt text](../assets/images/generating-en.png)

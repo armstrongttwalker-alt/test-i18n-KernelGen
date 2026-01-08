@@ -1,7 +1,9 @@
 # Generate Kernels through predefined use cases
 
 After signing in to KernelGen, you will see the welcome page.
+
 ![alt text](../assets/images/welcom-en.png)
+
 On the welcome page, perform the following steps to generate Triton
 Kernels:
 
@@ -28,6 +30,7 @@ Kernels:
    3. In the **KernelGen Configuration** section, increase or decrease the maximum number of iterations KernelGen attempts to pass the correctness test. The default is **5**. 
    4. Click **Next**.
    5. In the confirmation dialogue box, click **Confirm**.
+
    ![alt text](../assets/images/operator-definition-en.png)
 
 6. On the Kernel generation and test page, check the generation status on the **KernelGen** panel at the right.
