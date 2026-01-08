@@ -14,5 +14,5 @@ sphinx:
   builder: html
   fail_on_warning: false  
 
-form ats:
+formats:
   - pdf
