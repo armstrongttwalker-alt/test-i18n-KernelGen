@@ -1,6 +1,7 @@
 # 通过您的算子定义生成Kernel
 
 登录 KernelGen 后，您将看到欢迎页面。
+
 ![alt text](../assets/images/welcom-ch.png)
 
 在欢迎页面上，执行以下步骤以生成Kernel：

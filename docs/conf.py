@@ -137,24 +137,88 @@ myst_enable_extensions = [
     "attrs_block",
 ]
 htmlhelp_basename = "KernelGendoc"
-latex_documents = [
-    (
-        "index",
-        "KernelGen.tex",
-        "KernelGen Documentation",
-        "KernelGen Team",
-        "manual",
-    ),
-]
-man_pages = [
-    (
-        "index",
-        "kernelgen",
-        "KernelGen Documentation",
-        ["KernelGen Team"],
-        1,
-    )
-]
+
+# conf.py
+
+# 语言配置（基于你的现有代码）
+language = "en" if docset == "en" else "zh_CN"
+
+# 基础LaTeX配置
+latex_elements = {
+    'papersize': 'a4paper',
+    'pointsize': '10pt',
+    'figure_align': 'htbp',
+    'sphinxsetup': 'TitleColor={rgb}{0,0,0}, InnerLinkColor={rgb}{0,0,0}, OuterLinkColor={rgb}{0,0,0}',
+}
+
+# 根据docset设置不同的LaTeX配置
+if docset == "en":
+    # 英文LaTeX配置
+    latex_elements.update({
+        'preamble': r'''
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+\usepackage[english]{babel}
+''',
+        'babel': r'\usepackage[english]{babel}',
+        'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+    })
+    
+    # 英文文档元数据
+    latex_documents = [
+        ('index', 'document.tex', 'Your English Title', 'Author Name', 'manual'),
+    ]
+    
+    # 其他英文特定设置
+    latex_logo = '_static/logo_en.png' if os.path.exists('_static/logo_en.png') else None
+    
+else:  # zh_CN 中文配置
+    # 中文LaTeX配置
+    latex_elements.update({
+        'preamble': r'''
+\usepackage[UTF8]{ctex}
+\usepackage{xeCJK}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+''',
+        'babel': '',  # 禁用babel，使用ctex
+        'classoptions': ',oneside',
+        'fncychap': r'\usepackage[Sonny]{fncychap}',
+    })
+    
+    # 重命名LaTeX中的章节名称
+    latex_elements['preamble'] += r'''
+\addto\captionsenglish{\renewcommand{\contentsname}{目录}}
+\addto\captionsenglish{\renewcommand{\figurename}{图}}
+\addto\captionsenglish{\renewcommand{\tablename}{表}}
+\addto\captionsenglish{\renewcommand{\listfigurename}{插图目录}}
+\addto\captionsenglish{\renewcommand{\listtablename}{表格目录}}
+\addto\captionsenglish{\renewcommand{\indexname}{索引}}
+'''
+    
+    # 中文文档元数据
+    latex_documents = [
+        ('index', 'document.tex', '中文文档标题', '作者', 'manual'),
+    ]
+    
+    # 其他中文特定设置
+    latex_logo = '_static/logo_zh.png' if os.path.exists('_static/logo_zh.png') else None
+
+# 设置LaTeX引擎（中文推荐使用xelatex）
+if docset != "en":
+    latex_engine = 'xelatex'  # 中文使用xelatex
+else:
+    latex_engine = 'pdflatex'  # 英文可以使用pdflatex或xelatex
 
 language = "en" if docset == "en" else "zh_CN"
 

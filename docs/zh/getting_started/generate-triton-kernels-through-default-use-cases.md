@@ -1,6 +1,7 @@
 # 通过预定义用例生成Kernel
 
 登录 KernelGen 后，您将看到欢迎页面。
+
 ![alt text](../assets/images/welcom-ch.png)
 
 在欢迎页面上，执行以下步骤生成 Triton Kernel：
@@ -28,6 +29,7 @@
    3. 在 **KernelGen配置** 部分，增加或减少 KernelGen 尝试通过正确性测试的最大迭代轮次。默认值为 **5**。
    4. 点击 **下一步**。
    5. 在确认对话框中，点击 **确认**。
+
    ![alt text](../assets/images/operator-definition-ch.png)
 
 6. 在Kernel生成和测试页面上，查看右侧 **代码生成** 面板上的生成状态。
