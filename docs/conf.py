@@ -155,67 +155,19 @@ if docset == "en":
         ),
     ]
     
-    # 英文特定的LaTeX元素
-    latex_elements = {
-        'papersize': 'a4paper',
-        'pointsize': '10pt',
-        'figure_align': 'htbp',
-        'preamble': r'''
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
-\setmonofont{Courier New}
-\usepackage[english]{babel}
-''',
-        'babel': r'\usepackage[english]{babel}',
-        'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-        'classoptions': ',oneside',
-        'printindex': r'''
-\clearpage
-\phantomsection
-\addcontentsline{toc}{chapter}{\indexname}
-\printindex
-''',
-    }
-    
 else:
     # 中文配置
-    latex_documents = [
-        (
-            "index",
-            "KernelGen.tex",  # 保持相同文件名，但放在不同目录
-            "KernelGen 文档",
-            "KernelGen 团队",
-            "manual",
-        ),
-    ]
-    
-    # 中文特定的LaTeX元素
+    latex_engine = "xelatex"
+    latex_use_xindy = False
     latex_elements = {
-        'papersize': 'a4paper',
-        'pointsize': '10pt',
-        'figure_align': 'htbp',
-        'preamble': r'''
-\usepackage[UTF8]{ctex}
-\usepackage{xeCJK}
-\setCJKmainfont{SimSun}
-\setCJKsansfont{SimHei}
-\setCJKmonofont{SimSun}
-\XeTeXlinebreaklocale "zh"
-\XeTeXlinebreakskip = 0pt plus 1pt
-\usepackage{indentfirst}
-\setlength{\parindent}{2em}
-''',
-        'babel': '',  # 禁用babel，使用ctex
-        'classoptions': ',oneside',
-        'fncychap': r'\usepackage[Sonny]{fncychap}',
-        'printindex': r'''
-\clearpage
-\phantomsection
-\addcontentsline{toc}{chapter}{索引}
-\printindex
-''',
+    "preamble": "\\usepackage[UTF8]{ctex}\n",
+    "index",
+    "KernelGen.tex",  # 保持相同文件名，但放在不同目录
+    "KernelGen 文档",
+    "KernelGen 团队",
+    "manual",
     }
+    
 
 man_pages = [
     (
