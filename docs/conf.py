@@ -176,7 +176,8 @@ if docset == "en":
     
 else:  # zh_CN 中文配置
     # 中文LaTeX配置
-    latex_elements.update({
+    latex_use_xindy = False
+    latex_elements = {
         'preamble': r'''
 \usepackage[UTF8]{ctex}
 \usepackage{xeCJK}
@@ -218,7 +219,7 @@ else:  # zh_CN 中文配置
 if docset != "en":
     latex_engine = 'xelatex'  # 中文使用xelatex
 else:
-    latex_engine = 'pdflatex'  # 英文可以使用pdflatex或xelatex
+    latex_engine = 'xelatex'  # 英文可以使用pdflatex或xelatex
 
 language = "en" if docset == "en" else "zh_CN"
 
