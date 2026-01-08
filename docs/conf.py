@@ -154,23 +154,31 @@ if docset == "en":
             "manual",
         ),
     ]
+    # 英文PDF配置 - 修复目录标题
+    latex_elements = {
+        'printindex': '\\footnotesize\\raggedright\\printindex',
+        'tableofcontents': '\\renewcommand{\\contentsname}{Table of Contents}\\tableofcontents',
+    }
     
 else:
     # 中文配置
     latex_engine = "xelatex"
     latex_use_xindy = False
-    latex_elements = {
-        "preamble": "\\usepackage[UTF8]{ctex}\n",
-    }
     latex_documents = [
         (
             "index",
-            "KernelGen****.tex",  # 保持相同文件名，但放在不同目录
+            "KernelGen中文.tex",  # 保持相同文件名，但放在不同目录
             "KernelGen 文档",
             "KernelGen 团队",
             "manual",
         ),
     ]
+    # 中文PDF配置 - 修复目录标题
+    latex_elements = {
+        "preamble": "\\usepackage[UTF8]{ctex}\n",
+        'printindex': '\\footnotesize\\raggedright\\printindex',
+        'tableofcontents': '\\renewcommand{\\contentsname}{目录}\\tableofcontents',
+    }
     
 
 man_pages = [
