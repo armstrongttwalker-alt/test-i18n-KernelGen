@@ -142,37 +142,64 @@ htmlhelp_basename = "KernelGendoc"
 # 基础LaTeX配置
 latex_engine = 'xelatex'  # 必须使用xelatex支持中文
 
-# 根据语言配置latex_documents
+# 根据语言配置latex_documents和latex_elements
 if docset == "en":
     # 英文配置
-    latex_elements = {
-        'preamble': '\\renewcommand{\\contentsname}{Table of Contents}\n',
-    }
+    latex_engine = "xelatex"
     latex_documents = [
         (
             "index",
-            "KernelGen.tex",  # 保持相同文件名，但放在不同目录
+            "KernelGen.tex",
             "KernelGen Documentation",
             "KernelGen Team",
             "manual",
         ),
     ]
-    
+    latex_elements = {
+        'preamble': r'''
+            \usepackage{fontspec}
+            \setmainfont{DejaVu Serif}
+            \setsansfont{DejaVu Sans}
+            \setmonofont{DejaVu Sans Mono}
+            \renewcommand{\contentsname}{Table of Contents}
+        ''',
+        'tableofcontents': r'''
+            \renewcommand{\tableofcontents}{%
+                \cleardoublepage
+                \pdfbookmark[0]{\contentsname}{toc}
+                \tableofcontents
+            }
+        '''
+    }
 else:
     # 中文配置
+    latex_engine = "xelatex"
     latex_use_xindy = False
-    latex_elements = {
-        "preamble": "\\usepackage[UTF8]{ctex}\n\\renewcommand{\\contentsname}{目录}\n",
-    }
     latex_documents = [
         (
             "index",
-            "KernelGen.tex",  # 保持相同文件名，但放在不同目录
+            "KernelGen.tex",
             "KernelGen 文档",
             "KernelGen 团队",
             "manual",
         ),
     ]
+    latex_elements = {
+        'preamble': r'''
+            \usepackage[UTF8]{ctex}
+            \setmainfont{SimSun}
+            \setsansfont{SimHei}
+            \setmonofont{SimSun}
+            \renewcommand{\contentsname}{目录}
+        ''',
+        'tableofcontents': r'''
+            \renewcommand{\tableofcontents}{%
+                \cleardoublepage
+                \pdfbookmark[0]{\contentsname}{toc}
+                \tableofcontents
+            }
+        '''
+    }
     
 
 man_pages = [
