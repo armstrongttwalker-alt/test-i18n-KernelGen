@@ -160,13 +160,17 @@ else:
     latex_engine = "xelatex"
     latex_use_xindy = False
     latex_elements = {
-    "preamble": "\\usepackage[UTF8]{ctex}\n",
-    "index",
-    "KernelGen.tex",  # 保持相同文件名，但放在不同目录
-    "KernelGen 文档",
-    "KernelGen 团队",
-    "manual",
+        "preamble": "\\usepackage[UTF8]{ctex}\n",
     }
+    latex_documents = [
+        (
+            "index",
+            "KernelGen****.tex",  # 保持相同文件名，但放在不同目录
+            "KernelGen**** 文档",
+            "KernelGen**** 团队",
+            "manual",
+        ),
+    ]
     
 
 man_pages = [
