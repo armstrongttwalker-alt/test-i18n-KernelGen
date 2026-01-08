@@ -43,7 +43,6 @@ Guides you how to contribute the KernelGen generated Kernel, Correctness Test, a
 
 ::::
 
----
 
 ```{toctree}
 :caption: 📑 Release Notes
